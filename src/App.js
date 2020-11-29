@@ -1,16 +1,14 @@
 import React from "react";
 import { Canvas } from "react-three-fiber";
+import BoxMesh from "./components/BoxMesh";
 import "./App.scss";
 
 function App() {
   return (
     <>
       <Canvas colorManagement>
-        <ambientLight intensity={0.3} />
-        <mesh>
-          <boxBufferGeometry attach="geometry" args={[1, 2.5, 1]} />
-          <meshStandardMaterial attach="material" />
-        </mesh>
+        <ambientLight intensity={1} />
+        <BoxMesh position={[0, 0, 0]} args={[1, 1, 1]} color="blue" />
       </Canvas>
     </>
   );
