@@ -34,13 +34,6 @@ const Footer = () => {
                 duration: 1.2,
               },
             }}
-            exit={{
-              y: 25,
-              opacity: 0,
-              transition: {
-                duration: 0.2,
-              },
-            }}
             className="social"
           >
             <SocialLink

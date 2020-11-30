@@ -6,6 +6,7 @@ const SocialLink = (props) => {
     <li className="social-item">
       <a
         className={"social-link light"}
+        name="social-link"
         href={props.socialLink}
         target="_blank"
         rel="noreferrer"
