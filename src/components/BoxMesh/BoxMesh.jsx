@@ -3,8 +3,6 @@ import { useSpring, a } from "react-spring/three";
 import { Html } from "drei";
 import HtmlMesh from "../HtmlMesh/HtmlMesh";
 
-// import { Spring } from "react-spring/renderprops";
-
 const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
   const mesh = useRef();
   const [hover, setHover] = useState(false);
