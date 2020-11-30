@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useSpring, a, useTransition } from "react-spring/three";
+import React, { useRef, useState } from "react";
+import { useSpring, a } from "react-spring/three";
 import { Html } from "drei";
 import HtmlMesh from "../HtmlMesh/HtmlMesh";
 
@@ -8,12 +8,9 @@ import HtmlMesh from "../HtmlMesh/HtmlMesh";
 const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
   const mesh = useRef();
   const [hover, setHover] = useState(false);
-  const [show, setShow] = useState(false);
   const { scale } = useSpring({
     scale: hover ? [3.25, 1.85, 1] : args,
   });
-
-  useEffect(() => {}, []);
 
   const { opacity } = useSpring({
     from: {
@@ -24,7 +21,7 @@ const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
       mass: 1,
       tension: 40,
       friction: 150,
-      velocity: 0.1,
+      velocity: 0.11,
       clamp: true,
     },
   });

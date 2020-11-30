@@ -5,6 +5,8 @@ import BoxMesh from "./components/BoxMesh/BoxMesh";
 import Modal from "./components/Modal/Modal";
 import "./App.scss";
 import Skull from "./assets/images/skull.png";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const modalRef = useRef();
@@ -15,6 +17,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Canvas colorManagement>
         <ambientLight intensity={1} />
         <BoxMesh
@@ -31,6 +34,7 @@ function App() {
           </Modal>
         </Html>
       </Canvas>
+      <Footer />
     </>
   );
 }
