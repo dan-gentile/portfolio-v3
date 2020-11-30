@@ -8,7 +8,7 @@ import Skull from "./assets/images/skull.png";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-function App() {
+const App = () => {
   const modalRef = useRef();
 
   const handleClick = (e) => {
@@ -37,6 +37,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;

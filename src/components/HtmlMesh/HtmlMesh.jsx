@@ -25,6 +25,7 @@ const HtmlMesh = ({ handleClick, mouseOver, logo }) => {
               },
             }}
             className="MeshText"
+            style={{ cursor: "pointer" }}
             ref={HtmlRef}
             onMouseOver={mouseOver}
             onClick={handleClick}
