@@ -10,14 +10,24 @@
 
 .modal-content-wrapper {
   position: fixed;
-  width: 80vw;
-  height: 80vh;
+  width: 90vw;
+  height: 90vh;
   margin: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 50px;
+  padding: 20px;
   z-index: 3;
   border-radius: 10px;
+}
+
+.modal-content {
+  margin: 80px auto;
+  width: 80%;
+  height: 80%;
+}
+
+.close {
+  cursor: pointer;
 }

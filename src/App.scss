@@ -43,8 +43,41 @@ ul {
   &:hover {
     color: #000;
   }
-
+  &:active {
+    color: #05c7f2;
+  }
   &:focus {
     color: #05c7f2;
+  }
+}
+
+.AboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  img {
+    border-radius: 120px;
+  }
+  ul {
+    padding: 0;
+    display: flex;
+    width: 320px;
+    justify-content: space-evenly;
+  }
+  p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .AboutMe {
+    p {
+      text-align: center;
+      margin: 0;
+    }
   }
 }

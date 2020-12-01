@@ -1,7 +1,10 @@
 import React, { useState, forwardRef, useImperativeHandle } from "react";
 import ReactDom from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
+
 import "./Modal.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Modal = forwardRef((props, ref) => {
   const [open, setOpen] = useState(false);
@@ -55,8 +58,36 @@ const Modal = forwardRef((props, ref) => {
             }}
             className="modal-content-wrapper"
           >
-            <motion.div initial={{}} className="modal-content">
-              {props.children}
+            <FontAwesomeIcon
+              className="light close"
+              icon={faTimesCircle}
+              size="2x"
+              style={{ float: "right" }}
+              onClick={() => setOpen(false)}
+            />
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: -25,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1.2,
+                  delay: 0.4,
+                },
+              }}
+              exit={{
+                opacity: 0,
+                y: -25,
+                transition: {
+                  delay: 0.3,
+                },
+              }}
+              className="modal-content"
+            >
+              <div>{props.children}</div>
             </motion.div>
           </motion.div>
         </>
