@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./HtmlMesh.scss";
-const HtmlMesh = ({ handleClick, mouseOver, logo }) => {
+const HtmlMesh = ({ handleClick, mouseOver, mouseLeave, logo }) => {
   const HtmlRef = useRef();
   const [show, setShow] = useState(true);
 
@@ -28,13 +28,10 @@ const HtmlMesh = ({ handleClick, mouseOver, logo }) => {
             className="MeshText"
             ref={HtmlRef}
             onMouseOver={mouseOver}
+            onMouseLeave={mouseLeave}
             onClick={handleClick}
           >
-            <motion.img
-              style={{ width: "200px", height: "200px" }}
-              src={logo}
-              alt="logo"
-            />
+            <motion.img style={{ height: "250px" }} src={logo} alt="logo" />
           </motion.div>
         </>
       )}

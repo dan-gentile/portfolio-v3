@@ -16,7 +16,7 @@ const Header = ({ handleClick }) => {
       <AnimatePresence>
         {showHeader && (
           <>
-            <motion.h4
+            <motion.button
               initial={{
                 x: -25,
                 opacity: 0,
@@ -28,10 +28,12 @@ const Header = ({ handleClick }) => {
                   duration: 1.2,
                 },
               }}
+              className="btn light"
+              onClick={handleClick}
             >
-              Dan Gentile
-            </motion.h4>
-            <motion.button
+              About
+            </motion.button>
+            <motion.h4
               initial={{
                 y: -25,
                 opacity: 0,
@@ -43,11 +45,9 @@ const Header = ({ handleClick }) => {
                   duration: 1.2,
                 },
               }}
-              className="btn light"
-              onClick={handleClick}
             >
-              About
-            </motion.button>
+              Dan Gentile
+            </motion.h4>
             <motion.div
               initial={{
                 x: 25,

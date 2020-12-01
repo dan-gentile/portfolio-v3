@@ -24,10 +24,6 @@ const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
     },
   });
 
-  const mouseOver = () => {
-    setHover(true);
-  };
-
   const handlePointerOver = () => {
     setHover(true);
   };
@@ -60,7 +56,8 @@ const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
             <HtmlMesh
               logo={logo}
               handleClick={handleClick}
-              mouseOver={mouseOver}
+              mouseOver={handlePointerOver}
+              mouseLeave={handlePointerOut}
             />
           </Html>
         ) : null}

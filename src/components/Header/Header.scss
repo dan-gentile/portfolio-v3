@@ -7,11 +7,13 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
 
   h4 {
     color: #3b3a3c;
-    font-weight: 400;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 28px;
+    width: 180px;
   }
 
   .btn {
@@ -19,11 +21,13 @@ header {
     outline: none;
     background-color: #f1f4f8;
     cursor: pointer;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 1rem;
+    width: 160px;
   }
 
   label {
+    width: 160px;
+    font-size: 1rem;
     color: #3b3a3c;
   }
 }
