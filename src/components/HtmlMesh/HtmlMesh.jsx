@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import "./HtmlMesh.scss";
 const HtmlMesh = ({ handleClick, mouseOver, logo }) => {
   const HtmlRef = useRef();
   const [show, setShow] = useState(true);
@@ -25,7 +26,6 @@ const HtmlMesh = ({ handleClick, mouseOver, logo }) => {
               },
             }}
             className="MeshText"
-            style={{ cursor: "pointer" }}
             ref={HtmlRef}
             onMouseOver={mouseOver}
             onClick={handleClick}

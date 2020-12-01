@@ -3,7 +3,7 @@ import { Switch } from "@material-ui/core";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ handleClick }) => {
   const headerRef = useRef();
   const [showHeader, setShowHeader] = useState(false);
 
@@ -44,6 +44,7 @@ const Header = () => {
                 },
               }}
               className="btn light"
+              onClick={handleClick}
             >
               About
             </motion.button>
