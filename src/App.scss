@@ -72,6 +72,8 @@ ul {
     justify-content: space-evenly;
   }
   p {
+    line-height: 1.5rem;
+    text-align: center;
     width: 90%;
   }
 }
@@ -79,7 +81,6 @@ ul {
 @media screen and (max-width: 500px) {
   .AboutMe {
     p {
-      text-align: center;
       margin: 0;
     }
   }

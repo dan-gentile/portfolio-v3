@@ -31,7 +31,7 @@ const HtmlMesh = ({ handleClick, mouseOver, mouseLeave, logo }) => {
             onMouseLeave={mouseLeave}
             onClick={handleClick}
           >
-            <motion.img style={{ height: "250px" }} src={logo} alt="logo" />
+            <motion.img style={{ height: "200px" }} src={logo} alt="logo" />
           </motion.div>
         </>
       )}

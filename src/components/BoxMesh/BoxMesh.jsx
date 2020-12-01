@@ -6,6 +6,7 @@ import HtmlMesh from "../HtmlMesh/HtmlMesh";
 const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
   const mesh = useRef();
   const [hover, setHover] = useState(false);
+  const [display, setDisplay] = useState(true);
   const { scale } = useSpring({
     scale: hover ? [3.25, 1.85, 0.5] : args,
   });
@@ -51,7 +52,7 @@ const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
           color={color}
           opacity={opacity}
         />
-        {hover ? (
+        {hover && display ? (
           <Html center>
             <HtmlMesh
               logo={logo}
