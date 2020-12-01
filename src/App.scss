@@ -78,6 +78,31 @@ ul {
   }
 }
 
+.touring {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  overflow: auto;
+  ul {
+    padding: 0;
+    display: flex;
+    width: 320px;
+    justify-content: space-evenly;
+  }
+  p {
+    line-height: 1.5rem;
+    width: 90%;
+  }
+  h5 {
+    margin-top: 10px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .AboutMe {
     p {

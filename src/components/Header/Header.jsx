@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Switch } from "@material-ui/core";
 import { motion, AnimatePresence } from "framer-motion";
-import "./Header.scss";
 import { Link } from "react-router-dom";
 import {
   faGithubSquare,
@@ -14,6 +13,7 @@ import Resume from "../../assets/files/dan-gentile-resume.pdf";
 import ProfilePic from "../../assets/images/profilepicture.jpg";
 import SocialLink from "../../components/SocialLink/SocialLink";
 import Modal from "../../components/Modal/Modal";
+import "./Header.scss";
 
 const Header = () => {
   const headerRef = useRef();

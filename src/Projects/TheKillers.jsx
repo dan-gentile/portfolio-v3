@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
 import Modal from "../components/Modal/Modal";
 import Killers from "../assets/images/the-killers.png";
+import KillersShow from "../assets/images/theKillersShow.jpg";
 
 const TheKillers = () => {
   const theKillersRef = useRef();
@@ -23,7 +24,52 @@ const TheKillers = () => {
       />
       <Html>
         <Modal ref={theKillersRef} color="#959595">
-          <p>The Killers</p>
+          <div className="touring">
+            <h3>
+              The Killers <br /> Wonderful Wonderful Tour
+            </h3>
+            <img
+              src={KillersShow}
+              alt="The Killers Live"
+              style={{ width: "300px", borderRadius: "20px" }}
+            />
+            <h4>Disguise d3 programmer and operator</h4>
+            <h5>2017-2018</h5>
+            <p>
+              Responsibilities included setting up the server daily, updating
+              pixel mapping and cueing as necessary. Traveled with the show for
+              the entire record cycle including headlining and festival shows
+              across the globe. In addition to content playback the server
+              handled various live inputs. Sometimes these feeds were clean
+              straight to the screens. Other times the feeds were fed through
+              various Notch realtime fxs before heading to the screens. During
+              the show the server control was split between the lighting console
+              using SockPuppet and MIDI control.
+            </p>
+            <h5>Links</h5>
+            <ul>
+              <li>
+                <a
+                  className="light"
+                  href="https://www.disguise.one/en/solutions/concert-touring/the-killers-world-tour/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Disguise Press Release
+                </a>
+              </li>
+              <li>
+                <a
+                  className="light"
+                  href="https://capital-sound.co.uk/wp-content/uploads/2018/01/TPi-Feature-TheKillers-2017.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  TPI Magazine Article
+                </a>
+              </li>
+            </ul>
+          </div>
         </Modal>
       </Html>
     </>
