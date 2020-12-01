@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Switch } from "@material-ui/core";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 const Header = ({ handleClick }) => {
   const headerRef = useRef();
@@ -46,7 +47,9 @@ const Header = ({ handleClick }) => {
                 },
               }}
             >
-              Dan Gentile
+              <Link to="/" className="light">
+                Dan Gentile
+              </Link>
             </motion.h4>
             <motion.div
               initial={{
