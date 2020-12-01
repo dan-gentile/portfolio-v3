@@ -87,7 +87,6 @@ ul {
   height: 100%;
   width: 90%;
   margin: auto;
-  overflow: auto;
   ul {
     padding: 0;
     display: flex;
@@ -103,8 +102,35 @@ ul {
   }
 }
 
+.projects {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 320px;
+  }
+
+  p {
+    line-height: 1.5rem;
+    width: 90%;
+  }
+  h5 {
+    margin-top: 10px;
+  }
+}
+
 @media screen and (max-width: 500px) {
-  .AboutMe {
+  .AboutMe,
+  .touring,
+  .projects {
     p {
       margin: 0;
     }
