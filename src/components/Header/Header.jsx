@@ -92,7 +92,7 @@ const Header = () => {
           )}
         </AnimatePresence>
       </header>
-      <Modal ref={aboutMeRef} color="#959595">
+      <Modal ref={aboutMeRef} color="#a5a5a5">
         <div className="AboutMe">
           <img
             className="image"

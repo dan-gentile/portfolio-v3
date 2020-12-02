@@ -25,7 +25,7 @@ const Portfolio = () => {
         logo={PortfolioPic}
       />
       <Html>
-        <Modal ref={portfolioRef} color="#959595">
+        <Modal ref={portfolioRef} color="#a5a5a5">
           <div className="projects">
             <h3>Hey! You're Here!</h3>
             <h4>

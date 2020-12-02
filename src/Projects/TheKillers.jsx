@@ -23,7 +23,7 @@ const TheKillers = () => {
         logo={Killers}
       />
       <Html>
-        <Modal ref={theKillersRef} color="#959595">
+        <Modal ref={theKillersRef} color="#a5a5a5">
           <div className="touring">
             <h3>
               The Killers <br /> Wonderful Wonderful Tour

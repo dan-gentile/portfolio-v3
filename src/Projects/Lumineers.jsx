@@ -23,7 +23,7 @@ const Lumineers = () => {
         logo={TheLumineers}
       />
       <Html>
-        <Modal ref={theLumineersRef} color="#959595">
+        <Modal ref={theLumineersRef} color="#a5a5a5">
           <div className="touring">
             <h3>The Lumineers</h3>
             <img
