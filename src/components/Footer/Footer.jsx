@@ -37,28 +37,33 @@ const Footer = () => {
             className="social"
           >
             <SocialLink
+              title="GitHub"
               socialLink="https://github.com/dan-gentile"
               fontAwesomeIcon={
                 <FontAwesomeIcon icon={faGithubSquare} size="2x" />
               }
             />
             <SocialLink
+              title="Twitter"
               socialLink="https://twitter.com/dangentile"
               fontAwesomeIcon={
                 <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
               }
             />
             <SocialLink
+              title="LinkedIn"
               socialLink="https://www.linkedin.com/in/dangentile/"
               fontAwesomeIcon={<FontAwesomeIcon icon={faLinkedin} size="2x" />}
             />
             <SocialLink
+              title="Email"
               socialLink="mailto:dan@foxandrabbit.us"
               fontAwesomeIcon={
                 <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />
               }
             />
             <SocialLink
+              title="Resume"
               socialLink={Resume}
               fontAwesomeIcon={<FontAwesomeIcon icon={faFilePdf} size="2x" />}
             />

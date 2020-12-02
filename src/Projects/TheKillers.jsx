@@ -1,5 +1,5 @@
 import { Html } from "drei";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
 import Modal from "../components/Modal/Modal";
 import Killers from "../assets/images/the-killers.png";

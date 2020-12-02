@@ -10,6 +10,7 @@ const SocialLink = (props) => {
         href={props.socialLink}
         target="_blank"
         rel="noreferrer"
+        title={props.title}
       >
         {props.fontAwesomeIcon}
       </a>
