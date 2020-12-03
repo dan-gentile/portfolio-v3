@@ -1,13 +1,15 @@
 import { Html } from "drei";
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
 import Modal from "../components/Modal/Modal";
 import PortfolioPic from "../assets/images/portfolio.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faDesktop } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
+import { ShowModeContext } from "../ShowMode";
 
 const Portfolio = () => {
+  const { showMode } = useContext(ShowModeContext);
   const portfolioRef = useRef();
 
   const handleClick = (e) => {
@@ -20,7 +22,7 @@ const Portfolio = () => {
         id={2}
         position={[1, 0, 0]}
         args={[1, 1.75, 0.5]}
-        color="#a9a9a9"
+        color={showMode ? "#e630f5" : "#a9a9a9"}
         handleClick={handleClick}
         logo={PortfolioPic}
       />

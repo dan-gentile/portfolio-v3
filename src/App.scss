@@ -9,13 +9,21 @@ body,
 #root {
   width: 100%;
   height: 100%;
+  min-height: 500px;
+  overflow: hidden;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: #f1f4f8;
+  background-color: #f1f4f8;
+  transition: background-color 1000ms linear;
   position: fixed;
+}
+
+.body-dark {
+  background-color: #23262b;
+  transition: background-color 1000ms linear;
 }
 
 a {
@@ -39,7 +47,7 @@ ul {
 
 .light {
   color: #3b3a3c;
-
+  transition: color 1000ms linear;
   &:hover {
     color: #000;
   }
@@ -51,6 +59,23 @@ ul {
   }
   &:visited {
     color: #3b3a3c;
+  }
+}
+
+.dark {
+  color: #f1f4f8;
+  transition: color 1000ms linear;
+  &:hover {
+    color: #000;
+  }
+  &:active {
+    color: #05c7f2;
+  }
+  &:focus {
+    color: #05c7f2;
+  }
+  &:visited {
+    color: #f1f4f8;
   }
 }
 
@@ -134,5 +159,11 @@ ul {
     p {
       margin: 0;
     }
+  }
+}
+
+@media screen and (max-height: 630px) {
+  #root {
+    overflow: auto;
   }
 }

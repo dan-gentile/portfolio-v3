@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Switch } from "@material-ui/core";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -14,8 +14,10 @@ import ProfilePic from "../../assets/images/profilepicture.jpg";
 import SocialLink from "../../components/SocialLink/SocialLink";
 import Modal from "../../components/Modal/Modal";
 import "./Header.scss";
+import { ShowModeContext } from "../../ShowMode";
 
 const Header = () => {
+  const { showMode, setShowMode } = useContext(ShowModeContext);
   const headerRef = useRef();
   const aboutMeRef = useRef();
   const [showHeader, setShowHeader] = useState(false);
@@ -46,11 +48,12 @@ const Header = () => {
                     duration: 1.2,
                   },
                 }}
-                className="btn light"
+                className={showMode ? "btn dark" : "btn light"}
                 onClick={openAboutModal}
               >
                 About
               </motion.button>
+
               <motion.h4
                 initial={{
                   y: -25,
@@ -64,7 +67,7 @@ const Header = () => {
                   },
                 }}
               >
-                <Link to="/" className="light">
+                <Link to="/" className={showMode ? "dark" : "light"}>
                   Dan Gentile
                 </Link>
               </motion.h4>
@@ -82,10 +85,9 @@ const Header = () => {
                 }}
                 className="switchDiv"
               >
-                <label>
-                  {" "}
+                <label className={showMode ? "label-dark" : null}>
                   Show Mode
-                  <Switch />
+                  <Switch onChange={() => setShowMode(!showMode)} />
                 </label>
               </motion.div>
             </>

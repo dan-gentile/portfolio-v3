@@ -1,11 +1,12 @@
-import React from "react";
-import "./SocialLink.scss";
+import React, { useContext } from "react";
+import { ShowModeContext } from "../../ShowMode";
 
 const SocialLink = (props) => {
+  const { showMode } = useContext(ShowModeContext);
   return (
     <li className="social-item">
       <a
-        className={"social-link light"}
+        className={showMode ? "dark" : "light"}
         name="social-link"
         href={props.socialLink}
         target="_blank"

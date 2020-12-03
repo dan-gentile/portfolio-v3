@@ -1,11 +1,13 @@
 import { Html } from "drei";
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
 import Modal from "../components/Modal/Modal";
 import TheLumineers from "../assets/images/the-lumineers.png";
 import TheLumineersShow from "../assets/images/theLumineersShow.jpg";
+import { ShowModeContext } from "../ShowMode";
 
 const Lumineers = () => {
+  const { showMode } = useContext(ShowModeContext);
   const theLumineersRef = useRef();
 
   const handleClick = (e) => {
@@ -18,7 +20,7 @@ const Lumineers = () => {
         id={4}
         position={[-2, 0, 0]}
         args={[1, 1.75, 0.5]}
-        color="#676767"
+        color={showMode ? "#f9fd00" : "#676767"}
         handleClick={handleClick}
         logo={TheLumineers}
       />

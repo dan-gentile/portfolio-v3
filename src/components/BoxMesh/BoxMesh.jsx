@@ -1,7 +1,8 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useSpring, a } from "react-spring/three";
 import { Html } from "drei";
 import HtmlMesh from "../HtmlMesh/HtmlMesh";
+import { blue, red } from "@material-ui/core/colors";
 
 const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
   const mesh = useRef();

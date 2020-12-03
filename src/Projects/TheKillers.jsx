@@ -1,11 +1,13 @@
 import { Html } from "drei";
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
 import Modal from "../components/Modal/Modal";
 import Killers from "../assets/images/the-killers.png";
 import KillersShow from "../assets/images/theKillersShow.jpg";
+import { ShowModeContext } from "../ShowMode";
 
 const TheKillers = () => {
+  const { showMode } = useContext(ShowModeContext);
   const theKillersRef = useRef();
 
   const handleClick = (e) => {
@@ -18,7 +20,7 @@ const TheKillers = () => {
         id={5}
         position={[2, 0, 0]}
         args={[1, 1.75, 0.5]}
-        color="#bebebe"
+        color={showMode ? "#e12000" : "#bebebe"}
         handleClick={handleClick}
         logo={Killers}
       />

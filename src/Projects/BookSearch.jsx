@@ -1,5 +1,5 @@
 import { Html } from "drei";
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
 import Modal from "../components/Modal/Modal";
 import Book from "../assets/images/book-search.png";
@@ -7,8 +7,10 @@ import BookGif from "../assets/images/googlebooks.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faDesktop } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
+import { ShowModeContext } from "../ShowMode";
 
 const BookSearch = () => {
+  const { showMode } = useContext(ShowModeContext);
   const bookSearchRef = useRef();
 
   const handleClick = (e) => {
@@ -21,7 +23,7 @@ const BookSearch = () => {
         id={3}
         position={[-1, 0, 0]}
         args={[1, 1.75, 0.5]}
-        color="#838383"
+        color={showMode ? "#48fdfc" : "#838383"}
         handleClick={handleClick}
         logo={Book}
       />
