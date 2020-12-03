@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { useSpring, a } from "react-spring/three";
 import { Html } from "drei";
 import HtmlMesh from "../HtmlMesh/HtmlMesh";
-import { blue, red } from "@material-ui/core/colors";
 
 const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
   const mesh = useRef();
@@ -23,6 +22,16 @@ const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
       friction: 150,
       velocity: 0.11,
       clamp: true,
+    },
+  });
+
+  const { colors } = useSpring({
+    colors: color,
+    config: {
+      mass: 1,
+      tension: 40,
+      friction: 150,
+      duration: 1250,
     },
   });
 
@@ -52,7 +61,7 @@ const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
         <boxBufferGeometry attach="geometry" args={args} />
         <a.meshStandardMaterial
           attach="material"
-          color={color}
+          color={colors}
           opacity={opacity}
         />
         {hover ? (
