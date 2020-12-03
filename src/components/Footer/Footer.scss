@@ -1,5 +1,5 @@
 footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 150px;
@@ -12,5 +12,11 @@ footer {
     width: 320px;
     display: flex;
     justify-content: space-around;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  footer {
+    height: 100px;
   }
 }

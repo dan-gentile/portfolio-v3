@@ -37,3 +37,9 @@ header {
     transition: color 1000ms linear;
   }
 }
+
+@media screen and (max-height: 400px) {
+  header {
+    height: 75px;
+  }
+}

@@ -15,15 +15,13 @@ const Controls = () => {
     camera.position.set(0, 0, 5);
   }
 
-  //   camera.rotation.y = (90 * Math.PI) / 180;
-  camera.updateMatrix();
-
   useFrame(() => {
     orbitRef.current.update();
   });
 
   return (
     <OrbitControls
+      enableZoom={false}
       args={[camera, gl.domElement]}
       ref={orbitRef}
       target={[0, 0, 0]}
