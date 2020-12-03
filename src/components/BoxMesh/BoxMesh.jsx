@@ -3,7 +3,15 @@ import { useSpring, a } from "react-spring/three";
 import { Html } from "drei";
 import HtmlMesh from "../HtmlMesh/HtmlMesh";
 
-const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
+const BoxMesh = ({
+  id,
+  position,
+  position2,
+  color,
+  args,
+  handleClick,
+  logo,
+}) => {
   const mesh = useRef();
   const [hover, setHover] = useState(false);
 
@@ -49,7 +57,7 @@ const BoxMesh = ({ id, position, color, args, handleClick, logo }) => {
         castShadow
         renderOrder={hover ? 1 : 0}
         key={id}
-        position={position}
+        position={hover ? position2 : position}
         ref={mesh}
         onPointerOver={handlePointerOver}
         onPointerOut={handlePointerOut}

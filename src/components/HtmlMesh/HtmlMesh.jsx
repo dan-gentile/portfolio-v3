@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import "./HtmlMesh.scss";
 const HtmlMesh = ({ handleClick, mouseOver, mouseLeave, logo }) => {
   const HtmlRef = useRef();
@@ -32,9 +32,7 @@ const HtmlMesh = ({ handleClick, mouseOver, mouseLeave, logo }) => {
           setShow(false);
         }}
       >
-        {show ? (
-          <motion.img style={{ height: "200px" }} src={logo} alt="logo" />
-        ) : null}
+        {show ? <motion.img className="MeshImg" src={logo} alt="logo" /> : null}
       </motion.div>
     </>
   );

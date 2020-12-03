@@ -21,13 +21,18 @@ const Portfolio = () => {
       <BoxMesh
         id={2}
         position={[1, 0, 0]}
+        position2={[1, 0, 1]}
         args={[1, 1.75, 0.5]}
         color={showMode ? "#e630f5" : "#a9a9a9"}
         handleClick={handleClick}
         logo={PortfolioPic}
       />
       <Html>
-        <Modal ref={portfolioRef} color="#a5a5a5">
+        <Modal
+          ref={portfolioRef}
+          color={showMode ? "#9ad75c" : "#959595"}
+          showMode={showMode}
+        >
           <div className="projects">
             <h3>Hey! You're Here!</h3>
             <h4>
@@ -41,7 +46,7 @@ const Portfolio = () => {
             <ul>
               <li>
                 <a
-                  className="light"
+                  className={showMode ? "dark" : "light"}
                   href="https://github.com/dan-gentile/portfolio-v3"
                   target="_blank"
                   rel="noreferrer"
@@ -56,7 +61,7 @@ const Portfolio = () => {
               </li>
               <li>
                 <a
-                  className="light"
+                  className={showMode ? "dark" : "light"}
                   href="https://github.com/dan-gentile/portfolio-v3"
                   target="_blank"
                   rel="noreferrer"

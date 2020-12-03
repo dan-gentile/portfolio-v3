@@ -50,7 +50,8 @@ const Home = () => {
                 <shadowMaterial attach="material" opacity={0.3} />
               </mesh>
             </group>
-
+          </ShowModeContext.Provider>
+          <ShowModeContext.Provider value={{ showMode, setShowMode }}>
             <Lumineers />
             <BookSearch />
             <CoffeeApp />

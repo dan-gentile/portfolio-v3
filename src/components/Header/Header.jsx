@@ -86,7 +86,7 @@ const Header = () => {
                 className="switchDiv"
               >
                 <label className={showMode ? "label-dark" : null}>
-                  Show Mode
+                  {showMode ? "Boring Mode" : "Show Mode"}
                   <Switch onChange={() => setShowMode(!showMode)} />
                 </label>
               </motion.div>
@@ -94,7 +94,7 @@ const Header = () => {
           )}
         </AnimatePresence>
       </header>
-      <Modal ref={aboutMeRef} color="#a5a5a5">
+      <Modal ref={aboutMeRef} color="#a5a5a5" showMode={showMode}>
         <div className="AboutMe">
           <img
             className="image"

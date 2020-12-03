@@ -21,6 +21,11 @@ const Controls = () => {
 
   return (
     <OrbitControls
+      enabled={showMode ? true : false}
+      minPolarAngle={Math.PI / 2}
+      maxPolarAngle={Math.PI / 2}
+      minAzimuthAngle={-0.8}
+      maxAzimuthAngle={0.8}
       enableZoom={false}
       args={[camera, gl.domElement]}
       ref={orbitRef}

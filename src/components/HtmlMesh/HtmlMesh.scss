@@ -6,3 +6,13 @@
   justify-content: center;
   align-items: center;
 }
+
+.MeshImg {
+  height: 200px;
+}
+
+@media screen and (max-height: 400px) {
+  .MeshImg {
+    height: 75px;
+  }
+}

@@ -22,13 +22,18 @@ const BookSearch = () => {
       <BoxMesh
         id={3}
         position={[-1, 0, 0]}
+        position2={[-1, 0, 1]}
         args={[1, 1.75, 0.5]}
         color={showMode ? "#48fdfc" : "#838383"}
         handleClick={handleClick}
         logo={Book}
       />
       <Html>
-        <Modal ref={bookSearchRef} color="#a5a5a5">
+        <Modal
+          ref={bookSearchRef}
+          color={showMode ? "#9ad75c" : "#959595"}
+          showMode={showMode}
+        >
           <div className="projects">
             <h3>Search w/ Google Books</h3>
             <img
@@ -47,7 +52,7 @@ const BookSearch = () => {
             <ul>
               <li>
                 <a
-                  className="light"
+                  className={showMode ? "dark" : "light"}
                   href="https://github.com/dan-gentile/google-book-frontend"
                   target="_blank"
                   rel="noreferrer"
@@ -62,7 +67,7 @@ const BookSearch = () => {
               </li>
               <li>
                 <a
-                  className="light"
+                  className={showMode ? "dark" : "light"}
                   href="https://googlebooksearchfrontend.herokuapp.com/"
                   target="_blank"
                   rel="noreferrer"

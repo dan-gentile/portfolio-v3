@@ -21,13 +21,18 @@ const CoffeeApp = () => {
       <BoxMesh
         id={1}
         position={[0, 0, 0]}
+        position2={[0, 0, 1]}
         args={[1, 1.75, 0.5]}
         color={showMode ? "#42fb00" : "#959595"}
         handleClick={handleClick}
         logo={Coffee}
       />
       <Html>
-        <Modal ref={coffeeRef} color="#a5a5a5">
+        <Modal
+          ref={coffeeRef}
+          color={showMode ? "#9ad75c" : "#959595"}
+          showMode={showMode}
+        >
           <div className="projects">
             <h3>Coffee App</h3>
             <h4>
@@ -42,7 +47,7 @@ const CoffeeApp = () => {
             <ul>
               <li>
                 <a
-                  className="light"
+                  className={showMode ? "dark" : "light"}
                   href="https://github.com/dan-gentile/coffee-app-client"
                   target="_blank"
                   rel="noreferrer"
@@ -57,7 +62,7 @@ const CoffeeApp = () => {
               </li>
               <li>
                 <a
-                  className="light"
+                  className={showMode ? "dark" : "light"}
                   href="https://cfe-client.herokuapp.com/"
                   target="_blank"
                   rel="noreferrer"
@@ -88,7 +93,7 @@ const CoffeeApp = () => {
             <ul>
               <li>
                 <a
-                  className="light"
+                  className={showMode ? "dark" : "light"}
                   href="https://github.com/dan-gentile/coffee-app-dashboard"
                   target="_blank"
                   rel="noreferrer"
@@ -99,7 +104,7 @@ const CoffeeApp = () => {
               </li>
               <li>
                 <a
-                  className="light"
+                  className={showMode ? "dark" : "light"}
                   href="https://github.com/dan-gentile/coffee-app-backend"
                   target="_blank"
                   rel="noreferrer"

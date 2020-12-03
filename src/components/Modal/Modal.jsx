@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Modal = forwardRef((props, ref) => {
+  const showMode = props.showMode;
   const [open, setOpen] = useState(false);
   useImperativeHandle(ref, () => {
     return {
@@ -44,7 +45,7 @@ const Modal = forwardRef((props, ref) => {
             }}
             animate={{
               scale: 1,
-              backgroundColor: "#f1f4f8",
+              backgroundColor: showMode ? "#23262b" : "#f1f4f8",
               transition: {
                 duration: 0.3,
               },
@@ -59,7 +60,7 @@ const Modal = forwardRef((props, ref) => {
             className="modal-content-wrapper"
           >
             <FontAwesomeIcon
-              className="light close"
+              className={showMode ? "dark close" : "light close"}
               icon={faTimesCircle}
               size="2x"
               style={{ float: "right" }}
@@ -85,7 +86,9 @@ const Modal = forwardRef((props, ref) => {
                   delay: 0.3,
                 },
               }}
-              className="modal-content"
+              className={
+                showMode ? "modal-content modal-content-dark" : "modal-content"
+              }
             >
               <div>{props.children}</div>
             </motion.div>

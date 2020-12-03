@@ -19,13 +19,18 @@ const Lumineers = () => {
       <BoxMesh
         id={4}
         position={[-2, 0, 0]}
+        position2={[-2, 0, 1]}
         args={[1, 1.75, 0.5]}
         color={showMode ? "#f9fd00" : "#676767"}
         handleClick={handleClick}
         logo={TheLumineers}
       />
       <Html>
-        <Modal ref={theLumineersRef} color="#a5a5a5">
+        <Modal
+          ref={theLumineersRef}
+          color={showMode ? "#9ad75c" : "#959595"}
+          showMode={showMode}
+        >
           <div className="touring">
             <h3>The Lumineers</h3>
             <img
@@ -50,7 +55,7 @@ const Lumineers = () => {
             <ul>
               <li>
                 <a
-                  className="light"
+                  className={showMode ? "dark" : "light"}
                   href="https://plsn.com/articles/production-profile/the-lumineers-iii-tour/"
                   target="_blank"
                   rel="noreferrer"

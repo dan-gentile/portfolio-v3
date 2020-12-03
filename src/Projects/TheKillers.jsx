@@ -19,13 +19,18 @@ const TheKillers = () => {
       <BoxMesh
         id={5}
         position={[2, 0, 0]}
+        position2={[2, 0, 1]}
         args={[1, 1.75, 0.5]}
         color={showMode ? "#e12000" : "#bebebe"}
         handleClick={handleClick}
         logo={Killers}
       />
       <Html>
-        <Modal ref={theKillersRef} color="#a5a5a5">
+        <Modal
+          ref={theKillersRef}
+          color={showMode ? "#9ad75c" : "#959595"}
+          showMode={showMode}
+        >
           <div className="touring">
             <h3>
               The Killers <br /> Wonderful Wonderful Tour
@@ -52,7 +57,7 @@ const TheKillers = () => {
             <ul>
               <li>
                 <a
-                  className="light"
+                  className={showMode ? "dark" : "light"}
                   href="https://www.disguise.one/en/solutions/concert-touring/the-killers-world-tour/"
                   target="_blank"
                   rel="noreferrer"
@@ -62,7 +67,7 @@ const TheKillers = () => {
               </li>
               <li>
                 <a
-                  className="light"
+                  className={showMode ? "dark" : "light"}
                   href="https://capital-sound.co.uk/wp-content/uploads/2018/01/TPi-Feature-TheKillers-2017.pdf"
                   target="_blank"
                   rel="noreferrer"

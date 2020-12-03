@@ -29,6 +29,16 @@
   overflow: auto;
 }
 
+.modal-content-dark {
+  color: #f1f4f8;
+}
+
 .close {
   cursor: pointer;
+}
+
+@media screen and (max-height: 350px) {
+  .modal-content-wrapper {
+    overflow: auto;
+  }
 }
