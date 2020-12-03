@@ -3,6 +3,7 @@ import React, { useContext, useRef } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
 import Modal from "../components/Modal/Modal";
 import PortfolioPic from "../assets/images/portfolio.png";
+import PortfolioGif from "../assets/images/portfolio.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faDesktop } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
@@ -35,6 +36,11 @@ const Portfolio = () => {
         >
           <div className="projects">
             <h3>Hey! You're Here!</h3>
+            <img
+              src={PortfolioGif}
+              alt="portfolio gif"
+              style={{ width: "300px", borderRadius: "20px" }}
+            />
             <h4>
               <FontAwesomeIcon
                 icon={faCode}

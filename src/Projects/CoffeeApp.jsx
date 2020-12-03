@@ -3,6 +3,7 @@ import React, { useContext, useRef } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
 import Modal from "../components/Modal/Modal";
 import Coffee from "../assets/images/coffee-app.png";
+import CoffeeGif from "../assets/images/coffeeapp.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faDesktop } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
@@ -35,6 +36,11 @@ const CoffeeApp = () => {
         >
           <div className="projects">
             <h3>Coffee App</h3>
+            <img
+              src={CoffeeGif}
+              alt="website gif"
+              style={{ width: "300px", borderRadius: "20px" }}
+            />
             <h4>
               <FontAwesomeIcon
                 icon={faCode}
