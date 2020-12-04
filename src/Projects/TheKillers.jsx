@@ -26,7 +26,7 @@ const TheKillers = () => {
         logo={Killers}
       />
       <Html>
-        <Suspense>
+        <Suspense fallback={<div></div>}>
           <Modal
             ref={theKillersRef}
             color={showMode ? "#9ad75c" : "#959595"}

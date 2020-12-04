@@ -100,7 +100,7 @@ const Header = () => {
           )}
         </AnimatePresence>
       </header>
-      <Suspense>
+      <Suspense fallback={<div></div>}>
         <Modal ref={aboutMeRef} color="#a5a5a5" showMode={showMode}>
           <div className="AboutMe">
             <img

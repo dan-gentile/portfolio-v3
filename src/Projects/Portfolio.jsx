@@ -29,7 +29,7 @@ const Portfolio = () => {
         logo={PortfolioPic}
       />
       <Html>
-        <Suspense>
+        <Suspense fallback={<div></div>}>
           <Modal
             ref={portfolioRef}
             color={showMode ? "#9ad75c" : "#959595"}

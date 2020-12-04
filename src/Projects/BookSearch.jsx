@@ -29,7 +29,7 @@ const BookSearch = () => {
         logo={Book}
       />
       <Html>
-        <Suspense>
+        <Suspense fallback={<div></div>}>
           <Modal
             ref={bookSearchRef}
             color={showMode ? "#9ad75c" : "#959595"}
