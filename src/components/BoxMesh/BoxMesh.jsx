@@ -28,7 +28,7 @@ const BoxMesh = ({
       mass: 1,
       tension: 40,
       friction: 150,
-      velocity: 0.11,
+      velocity: 0.2,
       clamp: true,
     },
   });

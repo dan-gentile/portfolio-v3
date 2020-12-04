@@ -1,7 +1,7 @@
 import { Html } from "drei";
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, Suspense } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
-import Modal from "../components/Modal/Modal";
+const Modal = React.lazy(() => import("../components/Modal/Modal"));
 import Book from "../assets/images/book-search.png";
 import BookGif from "../assets/images/googlebooks.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,73 +29,75 @@ const BookSearch = () => {
         logo={Book}
       />
       <Html>
-        <Modal
-          ref={bookSearchRef}
-          color={showMode ? "#9ad75c" : "#959595"}
-          showMode={showMode}
-        >
-          <div className="projects">
-            <h3>Search w/ Google Books</h3>
-            <img
-              src={BookGif}
-              alt="website gif"
-              style={{ width: "300px", borderRadius: "20px" }}
-            />
-            <h4>
-              <FontAwesomeIcon
-                icon={faCode}
-                size="1x"
-                style={{ marginRight: "4px" }}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Modal
+            ref={bookSearchRef}
+            color={showMode ? "#9ad75c" : "#959595"}
+            showMode={showMode}
+          >
+            <div className="projects">
+              <h3>Search w/ Google Books</h3>
+              <img
+                src={BookGif}
+                alt="website gif"
+                style={{ width: "300px", borderRadius: "20px" }}
               />
-              React | SCSS | TypeScript | Express.js | MongoDB
-            </h4>
-            <ul>
-              <li>
-                <a
-                  className={showMode ? "dark" : "light"}
-                  href="https://github.com/dan-gentile/google-book-frontend"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon
-                    icon={faGithubAlt}
-                    size="1x"
-                    style={{ marginRight: "4px" }}
-                  />
-                  GitHub |
-                </a>
-              </li>
-              <li>
-                <a
-                  className={showMode ? "dark" : "light"}
-                  href="https://googlebooksearchfrontend.herokuapp.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon
-                    icon={faDesktop}
-                    size="1x"
-                    style={{ marginRight: "4px", marginLeft: "4px" }}
-                  />
-                  Website
-                </a>
-              </li>
-            </ul>
-            <p>
-              We're all looking for stuff to read, so lets make it easy! Search
-              the Google Books API to find the next book you need in your
-              collection! Once you find a book the user can go to the Google
-              Books website to get more information, or the user can save it to
-              the database to come back to at a later time. They can checkout
-              what they have saved and once they're done with the book they can
-              go ahead and remove it.
-            </p>
-            <p>
-              The app is a small scale MERN stack application. It also uses
-              error handling to prompt the user if something goes wrong.
-            </p>
-          </div>
-        </Modal>
+              <h4>
+                <FontAwesomeIcon
+                  icon={faCode}
+                  size="1x"
+                  style={{ marginRight: "4px" }}
+                />
+                React | SCSS | TypeScript | Express.js | MongoDB
+              </h4>
+              <ul>
+                <li>
+                  <a
+                    className={showMode ? "dark" : "light"}
+                    href="https://github.com/dan-gentile/google-book-frontend"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faGithubAlt}
+                      size="1x"
+                      style={{ marginRight: "4px" }}
+                    />
+                    GitHub |
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={showMode ? "dark" : "light"}
+                    href="https://googlebooksearchfrontend.herokuapp.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faDesktop}
+                      size="1x"
+                      style={{ marginRight: "4px", marginLeft: "4px" }}
+                    />
+                    Website
+                  </a>
+                </li>
+              </ul>
+              <p>
+                We're all looking for stuff to read, so lets make it easy!
+                Search the Google Books API to find the next book you need in
+                your collection! Once you find a book the user can go to the
+                Google Books website to get more information, or the user can
+                save it to the database to come back to at a later time. They
+                can checkout what they have saved and once they're done with the
+                book they can go ahead and remove it.
+              </p>
+              <p>
+                The app is a small scale MERN stack application. It also uses
+                error handling to prompt the user if something goes wrong.
+              </p>
+            </div>
+          </Modal>
+        </Suspense>
       </Html>
     </>
   );

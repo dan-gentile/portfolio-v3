@@ -1,4 +1,10 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, {
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  Suspense,
+} from "react";
 import { Switch } from "@material-ui/core";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -12,11 +18,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Resume from "../../assets/files/dan-gentile-resume.pdf";
 import ProfilePic from "../../assets/images/profilepicture.jpg";
 import SocialLink from "../../components/SocialLink/SocialLink";
-import Modal from "../../components/Modal/Modal";
 import "./Header.scss";
 import { ShowModeContext } from "../../ShowMode";
 
 const Header = () => {
+  const Modal = React.lazy(() => import("../../components/Modal/Modal"));
   const { showMode, setShowMode } = useContext(ShowModeContext);
   const headerRef = useRef();
   const aboutMeRef = useRef();
@@ -94,59 +100,63 @@ const Header = () => {
           )}
         </AnimatePresence>
       </header>
-      <Modal ref={aboutMeRef} color="#a5a5a5" showMode={showMode}>
-        <div className="AboutMe">
-          <img
-            className="image"
-            src={ProfilePic}
-            width="200px"
-            height="200px"
-            alt="profile"
-          />
-          <h4>Code | Design | Operate</h4>
-          <p>
-            As a web developer and concert roadie I find myself at the
-            intersection of design ideals and technical reality. <br />
-            The needs of concert designers is no different then web designers
-            and I find myself right at home making their <br />
-            dreams a reality. When I am not working on your web app you can find
-            me making coffee and going for a run.
-          </p>
-          <ul>
-            <SocialLink
-              title="GitHub"
-              socialLink="https://github.com/dan-gentile"
-              fontAwesomeIcon={
-                <FontAwesomeIcon icon={faGithubSquare} size="2x" />
-              }
+      <Suspense fallback={<div>Loading...</div>}>
+        <Modal ref={aboutMeRef} color="#a5a5a5" showMode={showMode}>
+          <div className="AboutMe">
+            <img
+              className="image"
+              src={ProfilePic}
+              width="200px"
+              height="200px"
+              alt="profile"
             />
-            <SocialLink
-              title="Twitter"
-              socialLink="https://twitter.com/dangentile"
-              fontAwesomeIcon={
-                <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
-              }
-            />
-            <SocialLink
-              title="LinkedIn"
-              socialLink="https://www.linkedin.com/in/dangentile/"
-              fontAwesomeIcon={<FontAwesomeIcon icon={faLinkedin} size="2x" />}
-            />
-            <SocialLink
-              title="Email"
-              socialLink="mailto:dan@foxandrabbit.us"
-              fontAwesomeIcon={
-                <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />
-              }
-            />
-            <SocialLink
-              title="Resume"
-              socialLink={Resume}
-              fontAwesomeIcon={<FontAwesomeIcon icon={faFilePdf} size="2x" />}
-            />
-          </ul>
-        </div>
-      </Modal>
+            <h4>Code | Design | Operate</h4>
+            <p>
+              As a web developer and concert roadie I find myself at the
+              intersection of design ideals and technical reality. <br />
+              The needs of concert designers is no different then web designers
+              and I find myself right at home making their <br />
+              dreams a reality. When I am not working on your web app you can
+              find me making coffee and going for a run.
+            </p>
+            <ul>
+              <SocialLink
+                title="GitHub"
+                socialLink="https://github.com/dan-gentile"
+                fontAwesomeIcon={
+                  <FontAwesomeIcon icon={faGithubSquare} size="2x" />
+                }
+              />
+              <SocialLink
+                title="Twitter"
+                socialLink="https://twitter.com/dangentile"
+                fontAwesomeIcon={
+                  <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
+                }
+              />
+              <SocialLink
+                title="LinkedIn"
+                socialLink="https://www.linkedin.com/in/dangentile/"
+                fontAwesomeIcon={
+                  <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                }
+              />
+              <SocialLink
+                title="Email"
+                socialLink="mailto:dan@foxandrabbit.us"
+                fontAwesomeIcon={
+                  <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />
+                }
+              />
+              <SocialLink
+                title="Resume"
+                socialLink={Resume}
+                fontAwesomeIcon={<FontAwesomeIcon icon={faFilePdf} size="2x" />}
+              />
+            </ul>
+          </div>
+        </Modal>
+      </Suspense>
     </>
   );
 };
