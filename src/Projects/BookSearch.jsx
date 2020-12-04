@@ -1,7 +1,6 @@
 import { Html } from "drei";
 import React, { useContext, useRef, Suspense } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
-const Modal = React.lazy(() => import("../components/Modal/Modal"));
 import Book from "../assets/images/book-search.png";
 import BookGif from "../assets/images/googlebooks.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +9,7 @@ import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { ShowModeContext } from "../ShowMode";
 
 const BookSearch = () => {
+  const Modal = React.lazy(() => import("../components/Modal/Modal"));
   const { showMode } = useContext(ShowModeContext);
   const bookSearchRef = useRef();
 

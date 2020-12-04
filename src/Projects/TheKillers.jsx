@@ -1,12 +1,12 @@
 import { Html } from "drei";
 import React, { useContext, useRef, Suspense } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
-const Modal = React.lazy(() => import("../components/Modal/Modal"));
 import Killers from "../assets/images/the-killers.png";
 import KillersShow from "../assets/images/theKillersShow.jpg";
 import { ShowModeContext } from "../ShowMode";
 
 const TheKillers = () => {
+  const Modal = React.lazy(() => import("../components/Modal/Modal"));
   const { showMode } = useContext(ShowModeContext);
   const theKillersRef = useRef();
 

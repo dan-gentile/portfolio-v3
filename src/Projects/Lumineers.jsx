@@ -1,12 +1,12 @@
 import { Html } from "drei";
 import React, { useContext, useRef, Suspense } from "react";
 import BoxMesh from "../components/BoxMesh/BoxMesh";
-const Modal = React.lazy(() => import("../components/Modal/Modal"));
 import TheLumineers from "../assets/images/the-lumineers.png";
 import TheLumineersShow from "../assets/images/theLumineersShow.jpg";
 import { ShowModeContext } from "../ShowMode";
 
 const Lumineers = () => {
+  const Modal = React.lazy(() => import("../components/Modal/Modal"));
   const { showMode } = useContext(ShowModeContext);
   const theLumineersRef = useRef();
 
