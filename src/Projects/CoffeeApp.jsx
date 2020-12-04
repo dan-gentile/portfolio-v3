@@ -29,7 +29,7 @@ const CoffeeApp = () => {
         logo={Coffee}
       />
       <Html>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense>
           <Modal
             ref={coffeeRef}
             color={showMode ? "#9ad75c" : "#959595"}
