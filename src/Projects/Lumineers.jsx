@@ -32,7 +32,7 @@ const Lumineers = () => {
             color={showMode ? "#9ad75c" : "#959595"}
             showMode={showMode}
           >
-            <div className="touring">
+            <article className="touring">
               <h3>The Lumineers</h3>
               <img
                 src={TheLumineersShow}
@@ -61,12 +61,13 @@ const Lumineers = () => {
                     href="https://plsn.com/articles/production-profile/the-lumineers-iii-tour/"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Link to Magazine Article"
                   >
                     PLSN Magazine Article
                   </a>
                 </li>
               </ul>
-            </div>
+            </article>
           </Modal>
         </Suspense>
       </Html>

@@ -35,7 +35,7 @@ const BookSearch = () => {
             color={showMode ? "#9ad75c" : "#959595"}
             showMode={showMode}
           >
-            <div className="projects">
+            <article className="projects">
               <h3>Search w/ Google Books</h3>
               <img
                 src={BookGif}
@@ -57,6 +57,7 @@ const BookSearch = () => {
                     href="https://github.com/dan-gentile/google-book-frontend"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Link to GitHub Repo"
                   >
                     <FontAwesomeIcon
                       icon={faGithubAlt}
@@ -72,6 +73,7 @@ const BookSearch = () => {
                     href="https://googlebooksearchfrontend.herokuapp.com/"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Link to Deployed Website"
                   >
                     <FontAwesomeIcon
                       icon={faDesktop}
@@ -95,7 +97,7 @@ const BookSearch = () => {
                 The app is a small scale MERN stack application. It also uses
                 error handling to prompt the user if something goes wrong.
               </p>
-            </div>
+            </article>
           </Modal>
         </Suspense>
       </Html>

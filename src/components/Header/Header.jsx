@@ -15,7 +15,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeSquare, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Resume from "../../assets/files/dan-gentile-resume.pdf";
+import Resume from "../../assets/files/DanGentile_Resume_1204.pdf";
 import ProfilePic from "../../assets/images/profilepicture.jpg";
 import SocialLink from "../../components/SocialLink/SocialLink";
 import "./Header.scss";
@@ -60,7 +60,7 @@ const Header = () => {
                 About
               </motion.button>
 
-              <motion.h4
+              <motion.h1
                 initial={{
                   y: -25,
                   opacity: 0,
@@ -76,7 +76,7 @@ const Header = () => {
                 <Link to="/" className={showMode ? "dark" : "light"}>
                   Dan Gentile
                 </Link>
-              </motion.h4>
+              </motion.h1>
               <motion.div
                 initial={{
                   x: 25,
@@ -102,7 +102,7 @@ const Header = () => {
       </header>
       <Suspense fallback={<div></div>}>
         <Modal ref={aboutMeRef} color="#a5a5a5" showMode={showMode}>
-          <div className="AboutMe">
+          <article className="AboutMe">
             <img
               className="image"
               src={ProfilePic}
@@ -122,39 +122,66 @@ const Header = () => {
             <ul>
               <SocialLink
                 title="GitHub"
+                label="Link to GitHub Profile"
                 socialLink="https://github.com/dan-gentile"
                 fontAwesomeIcon={
-                  <FontAwesomeIcon icon={faGithubSquare} size="2x" />
+                  <FontAwesomeIcon
+                    icon={faGithubSquare}
+                    size="2x"
+                    aria-label="GitHub Logo"
+                  />
                 }
               />
               <SocialLink
                 title="Twitter"
+                label="Link to Twitter Profile"
                 socialLink="https://twitter.com/dangentile"
                 fontAwesomeIcon={
-                  <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
+                  <FontAwesomeIcon
+                    icon={faTwitterSquare}
+                    size="2x"
+                    aria-label="Twitter Logo"
+                  />
                 }
               />
               <SocialLink
                 title="LinkedIn"
+                label="Link to LinkedIn Profile"
                 socialLink="https://www.linkedin.com/in/dangentile/"
                 fontAwesomeIcon={
-                  <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    size="2x"
+                    aria-label="LinkedIn Logo"
+                  />
                 }
               />
               <SocialLink
                 title="Email"
+                label="Link to send email"
                 socialLink="mailto:dan@foxandrabbit.us"
                 fontAwesomeIcon={
-                  <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />
+                  <FontAwesomeIcon
+                    icon={faEnvelopeSquare}
+                    size="2x"
+                    aria-label="Email Icon"
+                  />
                 }
               />
               <SocialLink
                 title="Resume"
+                label="Link to download resume"
                 socialLink={Resume}
-                fontAwesomeIcon={<FontAwesomeIcon icon={faFilePdf} size="2x" />}
+                fontAwesomeIcon={
+                  <FontAwesomeIcon
+                    icon={faFilePdf}
+                    size="2x"
+                    aria-label="PDF Icon"
+                  />
+                }
               />
             </ul>
-          </div>
+          </article>
         </Modal>
       </Suspense>
     </>

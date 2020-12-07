@@ -12,6 +12,7 @@ const SocialLink = (props) => {
         target="_blank"
         rel="noreferrer"
         title={props.title}
+        aria-label={props.label}
       >
         {props.fontAwesomeIcon}
       </a>

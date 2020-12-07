@@ -35,7 +35,7 @@ const CoffeeApp = () => {
             color={showMode ? "#9ad75c" : "#959595"}
             showMode={showMode}
           >
-            <div className="projects">
+            <article className="projects">
               <h3>Coffee App</h3>
               <img
                 src={CoffeeGif}
@@ -58,6 +58,7 @@ const CoffeeApp = () => {
                     href="https://github.com/dan-gentile/coffee-app-client"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Link to GitHub Repo"
                   >
                     <FontAwesomeIcon
                       icon={faGithubAlt}
@@ -73,6 +74,7 @@ const CoffeeApp = () => {
                     href="https://cfe-client.herokuapp.com/"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Link to Deployed WebApp"
                   >
                     <FontAwesomeIcon
                       icon={faDesktop}
@@ -105,6 +107,7 @@ const CoffeeApp = () => {
                     target="_blank"
                     rel="noreferrer"
                     style={{ marginRight: "15px" }}
+                    aria-label="Link to GitHub Repo"
                   >
                     Dashboard GitHub
                   </a>
@@ -116,12 +119,13 @@ const CoffeeApp = () => {
                     target="_blank"
                     rel="noreferrer"
                     style={{ marginLeft: "15px" }}
+                    aria-label="Link to GitHub Repo"
                   >
                     Server GitHub
                   </a>
                 </li>
               </ul>
-            </div>
+            </article>
           </Modal>
         </Suspense>
       </Html>

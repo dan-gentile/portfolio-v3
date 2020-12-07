@@ -32,7 +32,7 @@ const TheKillers = () => {
             color={showMode ? "#9ad75c" : "#959595"}
             showMode={showMode}
           >
-            <div className="touring">
+            <article className="touring">
               <h3>
                 The Killers <br /> Wonderful Wonderful Tour
               </h3>
@@ -62,6 +62,7 @@ const TheKillers = () => {
                     href="https://www.disguise.one/en/solutions/concert-touring/the-killers-world-tour/"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Link to Magazine Article"
                   >
                     Disguise Press Release
                   </a>
@@ -72,12 +73,13 @@ const TheKillers = () => {
                     href="https://capital-sound.co.uk/wp-content/uploads/2018/01/TPi-Feature-TheKillers-2017.pdf"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Link to Magazine Article"
                   >
                     TPI Magazine Article
                   </a>
                 </li>
               </ul>
-            </div>
+            </article>
           </Modal>
         </Suspense>
       </Html>

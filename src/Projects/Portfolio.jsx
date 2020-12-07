@@ -35,7 +35,7 @@ const Portfolio = () => {
             color={showMode ? "#9ad75c" : "#959595"}
             showMode={showMode}
           >
-            <div className="projects">
+            <article className="projects">
               <h3>Hey! You're Here!</h3>
               <img
                 src={PortfolioGif}
@@ -57,6 +57,7 @@ const Portfolio = () => {
                     href="https://github.com/dan-gentile/portfolio-v3"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Link to GitHub Repo"
                   >
                     <FontAwesomeIcon
                       icon={faGithubAlt}
@@ -69,9 +70,10 @@ const Portfolio = () => {
                 <li>
                   <a
                     className={showMode ? "dark" : "light"}
-                    href="https://github.com/dan-gentile/portfolio-v3"
+                    href="https://dangentile.me/"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Link to Deployed Website"
                   >
                     <FontAwesomeIcon
                       icon={faDesktop}
@@ -100,7 +102,7 @@ const Portfolio = () => {
                 reality are the creative challenges I strive for, and this sure
                 was a challenge.
               </p>
-            </div>
+            </article>
           </Modal>
         </Suspense>
       </Html>
