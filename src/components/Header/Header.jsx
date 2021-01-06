@@ -111,6 +111,7 @@ const Header = () => {
               alt="profile"
             />
             <h4>Code | Design | Operate</h4>
+            <h4>Email: dan@foxandrabbit.us</h4>
             <p>
               As a web developer and concert roadie I find myself at the
               intersection of design ideals and technical reality. <br />
